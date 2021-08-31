@@ -2,6 +2,8 @@
 
 Consume telemetry from ground station TCP servers, store the data in InfluxDB and visualise in Grafana.
 
+![Working example](./docs/example.png)
+
 ## Start dependencies
 This will start Influx, Grafana and the ground station telemetry server.   
 It will require you to have Docker installed.
