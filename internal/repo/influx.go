@@ -13,8 +13,8 @@ import (
 
 const MEASUREMENT_NAME = "telemetry"
 
-//go:generate ${GOBIN}/mockery --dir ${GOBASE}/vendor/github.com/influxdata/influxdb-client-go/v2 --name Client
-//go:generate ${GOBIN}/mockery --dir ${GOBASE}/vendor/github.com/influxdata/influxdb-client-go/v2/api --name WriteAPIBlocking
+//go:generate go run github.com/vektra/mockery/v2@latest --dir ${GOBASE}/vendor/github.com/influxdata/influxdb-client-go/v2 --name Client
+//go:generate go run github.com/vektra/mockery/v2@latest --dir ${GOBASE}/vendor/github.com/influxdata/influxdb-client-go/v2/api --name WriteAPIBlocking
 type InfluxRepo struct {
 	client influxdb2.Client
 	api    influxdb2API.WriteAPIBlocking

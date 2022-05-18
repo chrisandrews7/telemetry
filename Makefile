@@ -4,13 +4,9 @@ GOBIN=$(GOBASE)/bin
 include .env
 export
 
-tools: bin/mockery
-bin/mockery:
-	GOBIN=${GOBIN} go install github.com/vektra/mockery/v2/...
-
 .PHONY: generate-mocks
-generate-mocks: tools
-	GOBIN=${GOBIN} GOBASE=${GOBASE} go generate ./...
+generate-mocks:
+	GOBASE=${GOBASE} go generate ./...
 
 .PHONY: test
 test: 
